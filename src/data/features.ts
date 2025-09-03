@@ -1,11 +1,11 @@
-import featureXcode from "@/assets/feature-xcode-native.jpg";
-import featureClaude from "@/assets/feature-claude.jpg";
 import agentDemo from "@/assets/agent-mode.mov";
 import agentDemoPicture from "@/assets/agent-mode.jpg";
 import chatDemo from "@/assets/chat-mode.mov";
 import chatDemoPicture from "@/assets/chat-mode.jpg";
 import claudeCodeDemo from "@/assets/claude-code.mov";
 import claudeCodeDemoPicture from "@/assets/claude-code.jpg";
+import xcode26Demo from "@/assets/xcode26-demo.mov";
+import xcode26DemoPicture from "@/assets/xcode26-demo.jpg";
 
 export interface Feature {
   id: string; // Stable identifier that won't change
@@ -43,6 +43,7 @@ export const features: Feature[] = [
     id: "xcode-26-integration",
     title: "Xcode 26",
     description: "In Xcode 26, you can chose to interact with cmd through the new 'Code Assist' interface. When working on complex tasks, cmd's agentic AI is much more powerful than that of Xcode which cripples the most powerful LLMs with unnecessary privacy limitations. It's also easier to manage configurations like using a specific AI provider in cmd.",
-    image: featureXcode,
+    video: xcode26Demo,
+    image: xcode26DemoPicture,
   },
 ];
