@@ -6,12 +6,13 @@
   "scripts": {
     "homepage": "https://getcmd-dev.github.io/public-website/",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build",
+    "predeploy": "yarn build && yarn add-domain",
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "add-domain": "echo \"getcmd.dev\" > dist/CNAME"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
