@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 import ScreenshotLabeler, { Label } from "./ScreenshotLabeler";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Hero = () => {
   const [isDark, setIsDark] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const checkTheme = () => {
@@ -41,12 +43,12 @@ const Hero = () => {
     <section className="pt-32 pb-20 px-6 w-full">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
             The best AI in Xcode, 
             <span className="text-primary"> open source</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
             Boost your productivity without compromise
           </p>
           
@@ -68,17 +70,27 @@ const Hero = () => {
         </div>
       </div>
         
-      {/* Full-width screenshot section with labels */}
+      {/* Full-width screenshot section */}
       <div className="w-full mt-20">
-        <ScreenshotLabeler
-          imageSrc={heroImage}
-          imageAlt="cmd AI in Xcode interface"
-          labels={screenshotLabels}
-          padding={25}
-          lineLength={15}
-          margin={20}
-          className="mx-auto"
-        />
+        {isMobile ? (
+          <div className="px-4">
+            <img
+              src="/src/assets/screenshot.png"
+              alt="cmd AI in Xcode interface with features highlighted"
+              className="w-full h-auto rounded-xl mx-auto max-w-4xl"
+            />
+          </div>
+        ) : (
+          <ScreenshotLabeler
+            imageSrc={heroImage}
+            imageAlt="cmd AI in Xcode interface"
+            labels={screenshotLabels}
+            padding={25}
+            lineLength={15}
+            margin={20}
+            className="mx-auto"
+          />
+        )}
       </div>
     </section>
   );
