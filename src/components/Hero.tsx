@@ -3,6 +3,7 @@ import { Download, Github } from "lucide-react";
 import { useState, useEffect } from "react";
 import ScreenshotLabeler, { Label } from "./ScreenshotLabeler";
 import { useIsMobile } from "@/hooks/use-mobile";
+import cmdScreenshot from "@/assets/screenshot.png"
 
 const Hero = () => {
   const [isDark, setIsDark] = useState(false);
@@ -75,7 +76,7 @@ const Hero = () => {
         {isMobile ? (
           <div className="px-4">
             <img
-              src="/src/assets/screenshot.png"
+              src={cmdScreenshot}
               alt="cmd AI in Xcode interface with features highlighted"
               className="w-full h-auto rounded-xl mx-auto max-w-4xl"
             />
