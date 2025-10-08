@@ -62,7 +62,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="text-lg px-8 py-4"
-              onClick={() => window.open("https://github.com/getcmd-dev/cmd", "_blank")}
+              onClick={() => window.open("https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg", "_blank")}
             >
               <Github className="w-5 h-5" />
               View on GitHub
