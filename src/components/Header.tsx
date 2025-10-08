@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { features } from "@/data/features";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const Header = () => {
   return (
@@ -41,16 +42,19 @@ const Header = () => {
             </a>
           </nav>
         </div>
-        
-        <Button 
-          variant="github" 
-          size="sm"
-          className="flex items-center gap-2"
-          onClick={() => window.open("https://github.com/getcmd-dev/cmd", "_blank")}
-        >
-          <Github className="w-4 h-4" />
-          GitHub
-        </Button>
+
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <Button
+            variant="github"
+            size="sm"
+            className="flex items-center gap-2"
+            onClick={() => window.open("https://github.com/getcmd-dev/cmd", "_blank")}
+          >
+            <Github className="w-4 h-4" />
+            GitHub
+          </Button>
+        </div>
       </div>
     </header>
   );

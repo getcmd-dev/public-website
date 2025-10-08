@@ -131,46 +131,42 @@ const ScreenshotLabeler: React.FC<ScreenshotLabelerProps> = ({
                 {/* First line - start from dot position */}
                 {pos.direction1 === 'left' ? (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: `calc(-${padding + extraPadding}px)`,
                       top: `calc(${pos.point.y}% - ${lineWidth / 2}px)`,
                       width: `calc(${pos.point.x}% + ${padding + extraPadding}px)`,
-                      height: `${lineWidth}px`,
-                      backgroundColor: '#000'
+                      height: `${lineWidth}px`
                     }}
                   />
                 ) : pos.direction1 === 'right' ? (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: `calc(${pos.point.x}%)`,
                       top: `calc(${pos.point.y}% - ${lineWidth / 2}px)`,
                       width: `calc((100% - ${pos.point.x}%) + ${padding + extraPadding}px)`,
-                      height: `${lineWidth}px`,
-                      backgroundColor: '#000'
+                      height: `${lineWidth}px`
                     }}
                   />
                 ) : pos.direction1 === 'top' ? (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: `calc(${pos.point.x}% - ${lineWidth / 2}px)`,
                       top: `calc(-${padding + extraPadding}px)`,
                       width: `${lineWidth}px`,
-                      height: `calc(${pos.point.y}% + ${padding + extraPadding}px)`,
-                      backgroundColor: '#000'
+                      height: `calc(${pos.point.y}% + ${padding + extraPadding}px)`
                     }}
                   />
                 ) : (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: `calc(${pos.point.x}% - ${lineWidth / 2}px)`,
                       top: `calc(${pos.point.y}%)`,
                       width: `${lineWidth}px`,
-                      height: `calc((100% - ${pos.point.y}%) + ${padding + extraPadding}px)`,
-                      backgroundColor: '#000'
+                      height: `calc((100% - ${pos.point.y}%) + ${padding + extraPadding}px)`
                     }}
                   />
                 )}
@@ -179,46 +175,42 @@ const ScreenshotLabeler: React.FC<ScreenshotLabelerProps> = ({
                 {pos.direction2 && (
                   pos.direction2 === 'left' ? (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: `calc(${pos.point.x}% - ${lineLength - lineWidth / 2}px)`,
                       top: (pos.direction1 === 'top' ? `calc(-${padding + extraPadding}px)` : pos.direction1 === 'bottom' ? `calc(100% + ${padding + extraPadding}px)` : `${pos.point.y}%`),
                       width: `${lineLength}px`,
-                      height: `${lineWidth}px`,
-                      backgroundColor: '#000'
+                      height: `${lineWidth}px`
                     }}
                   />
                 ) : pos.direction2 === 'right' ? (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: `calc(${pos.point.x}% - ${lineWidth / 2}px)`,
                       top: (pos.direction1 === 'top' ? `calc(-${padding + extraPadding}px)` : pos.direction1 === 'bottom' ? `calc(100% + ${padding + extraPadding}px)` : `${pos.point.y}%`),
                       width: `${lineLength}px`,
-                      height: `${lineWidth}px`,
-                      backgroundColor: '#000'
+                      height: `${lineWidth}px`
                     }}
                   />
                 ) : pos.direction2 === 'top' ? (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: (pos.direction1 === 'left' ? `calc(-${padding + extraPadding}px)` : pos.direction1 === 'right' ? `calc(100% + ${padding + extraPadding}px)` : `${pos.point.x}%`),
                       top: `calc(${pos.point.y}% - ${lineLength - lineWidth / 2}px)`,
                       width: `${lineWidth}px`,
-                      height: `${lineLength}px`,
-                      backgroundColor: '#000'
+                      height: `${lineLength}px`
                     }}
                   />
                 ) : (
                   <div
-                    className="absolute bg-black z-20"
+                    className="absolute bg-foreground z-20"
                     style={{
                       left: (pos.direction1 === 'left' ? `calc(-${padding + extraPadding}px)` : pos.direction1 === 'right' ? `calc(100% + ${padding + extraPadding}px)` : `${pos.point.x}%`),
                       top: `calc(${pos.point.y}% - ${lineWidth / 2}px)`,
                       width: `${lineWidth}px`,
-                      height: `${lineLength}px`,
-                      backgroundColor: '#000'
+                      height: `${lineLength}px`
                     }}
                   />
                 )
@@ -283,7 +275,7 @@ const ScreenshotLabeler: React.FC<ScreenshotLabelerProps> = ({
                   }}
                 >
                   <div
-                    className={`bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg p-3 shadow-lg`}
+                    className={`bg-background/95 backdrop-blur-sm border border-border rounded-lg p-3 shadow-lg`}
                     style={{
                       width: 'max-content',
                       maxWidth: '260px',
@@ -291,10 +283,10 @@ const ScreenshotLabeler: React.FC<ScreenshotLabelerProps> = ({
                       textAlign: (pos.direction1 === 'left' || pos.direction2 === 'left') ? 'right' : (pos.direction1 === 'right' || pos.direction2 === 'right') ? 'left' : 'center'
                     }}
                   >
-                    <div className={`font-semibold text-gray-900 text-sm ${((pos.direction2 ?? pos.direction1) === 'top' || (pos.direction2 ?? pos.direction1) === 'bottom') ? '' : 'mb-1'}`}>
+                    <div className={`font-semibold text-foreground text-sm ${((pos.direction2 ?? pos.direction1) === 'top' || (pos.direction2 ?? pos.direction1) === 'bottom') ? '' : 'mb-1'}`}>
                       {label.title}
                     </div>
-                    <div className="text-gray-600 text-xs leading-relaxed" style={{whiteSpace: 'pre-line'}}>
+                    <div className="text-muted-foreground text-xs leading-relaxed" style={{whiteSpace: 'pre-line'}}>
                       {label.subtext}
                     </div>
                   </div>

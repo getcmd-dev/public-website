@@ -66,7 +66,7 @@ const Features = () => {
                     </Card>
                   </div>
                   
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
