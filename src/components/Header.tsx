@@ -32,13 +32,11 @@ const Header = () => {
               </a>
             ))}
             <a 
-              href="https://github.com/getcmd-dev/cmd?tab=readme-ov-file#cmd-agentic-ai-in-xcode" 
-              target="_blank"
+              href="https://docs.getcmd.dev/"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
             >
               Docs
-              <ExternalLink className="w-3 h-3" />
             </a>
           </nav>
         </div>
