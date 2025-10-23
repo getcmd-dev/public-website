@@ -8,30 +8,39 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-3">
-            <img 
-              src="/cmd-logo.png" 
-              alt="cmd logo" 
+          <a href="/" className="flex items-center gap-3">
+            <img
+              src="/cmd-logo.png"
+              alt="cmd logo"
               className="w-8 h-8"
             />
             <span className="font-bold text-xl">cmd</span>
-          </div>
+          </a>
           
           <nav className="hidden md:flex items-center gap-6">
             {features.map((feature) => (
-              <a 
+              <a
                 key={feature.id}
-                href={`#${feature.id}`}
+                href={`/#${feature.id}`}
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById(feature.id)?.scrollIntoView();
+                  const onHomePage = window.location.pathname === '/';
+                  if (onHomePage) {
+                    e.preventDefault();
+                    document.getElementById(feature.id)?.scrollIntoView();
+                  }
                 }}
               >
                 {feature.navLabel || feature.title}
               </a>
             ))}
-            <a 
+            <a
+              href="/changelog"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Changelog
+            </a>
+            <a
               href="https://docs.getcmd.dev/"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1"
