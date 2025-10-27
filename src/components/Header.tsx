@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { features } from "@/data/features";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -34,12 +35,12 @@ const Header = () => {
                 {feature.navLabel || feature.title}
               </a>
             ))}
-            <a
-              href="/changelog"
+            <Link
+              to="/changelog"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Changelog
-            </a>
+            </Link>
             <a
               href="https://docs.getcmd.dev/"
               rel="noopener noreferrer"
