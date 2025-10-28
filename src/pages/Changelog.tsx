@@ -37,7 +37,14 @@ const Changelog = () => {
               </h2>
 
               <div className="text-primary font-mono mb-1">
-                {entry.version}
+                <a
+                  href={`https://github.com/getcmd-dev/cmd/releases/tag/v${entry.version}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  {entry.version}
+                </a>
               </div>
               <time className="text-sm text-muted-foreground mb-4 block">
                 {entry.date}
