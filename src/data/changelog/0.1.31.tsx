@@ -1,7 +1,7 @@
 import codex from "@/assets/changelog/0.1.31-codex.png";
 import context from "@/assets/changelog/0.1.31-context.png";
 
-export const changelog_0_1_30 = {
+export const changelog_0_1_31 = {
   id: "0.1.31",
   version: "0.1.31",
   date: "Oct 23th, 2025",
