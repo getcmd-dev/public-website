@@ -1,5 +1,5 @@
 
-export const changelog_0_1_30 = {
+export const changelog_0_1_32 = {
   id: "0.1.32",
   version: "0.1.32",
   date: "Oct 25th, 2025",
