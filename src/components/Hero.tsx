@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Github } from "lucide-react";
+import { Download } from "lucide-react";
 import { useState, useEffect } from "react";
 import ScreenshotLabeler, { Label } from "./ScreenshotLabeler";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -54,18 +54,15 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-4" onClick={() => window.open("https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg", "_blank")}>
-              <Download className="w-5 h-5" />
-              Install cmd
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="hero"
+              size="lg"
               className="text-lg px-8 py-4"
               onClick={() => window.open("https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg", "_blank")}
+              title="https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg"
             >
-              <Github className="w-5 h-5" />
-              View on GitHub
+              <Download className="w-5 h-5" />
+              Install cmd
             </Button>
           </div>
         </div>
