@@ -57,11 +57,16 @@ const Header = () => {
             variant="github"
             size="sm"
             className="flex items-center gap-2"
-            onClick={() => window.open("https://github.com/getcmd-dev/cmd", "_blank")}
-            title="https://github.com/getcmd-dev/cmd"
+            asChild
           >
-            <Github className="w-4 h-4" />
-            GitHub
+            <a
+              href="https://github.com/getcmd-dev/cmd"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-4 h-4" />
+              GitHub
+            </a>
           </Button>
         </div>
       </div>
