@@ -62,8 +62,6 @@ const Hero = () => {
             >
               <a
                 href="https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <Download className="w-5 h-5" />
                 Install cmd
