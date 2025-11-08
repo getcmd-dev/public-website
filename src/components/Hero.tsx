@@ -58,11 +58,16 @@ const Hero = () => {
               variant="hero"
               size="lg"
               className="text-lg px-8 py-4"
-              onClick={() => window.open("https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg", "_blank")}
-              title="https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg"
+              asChild
             >
-              <Download className="w-5 h-5" />
-              Install cmd
+              <a
+                href="https://github.com/getcmd-dev/cmd/releases/latest/download/cmd.dmg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="w-5 h-5" />
+                Install cmd
+              </a>
             </Button>
           </div>
         </div>
