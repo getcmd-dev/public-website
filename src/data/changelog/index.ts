@@ -5,7 +5,8 @@ export interface Commit {
 
 export type DescriptionBlock =
   | { type: 'text'; content: string }
-  | { type: 'image'; src: string; alt?: string };
+  | { type: 'image'; src: string; alt?: string }
+  | { type: 'video'; src: string; poster?: string; alt?: string };
 
 export interface ChangelogEntry {
   id: string;
