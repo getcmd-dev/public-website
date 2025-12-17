@@ -70,6 +70,18 @@ const Changelog = () => {
                             />
                           </div>
                         );
+                      } else if (block.type === 'video') {
+                        return (
+                          <div key={idx} className="rounded-lg border border-border overflow-hidden">
+                            <video
+                              controls
+                              className="w-full"
+                              poster={block.poster}
+                            >
+                              <source src={block.src} type="video/mp4" />
+                            </video>
+                          </div>
+                        );
                       }
                       return null;
                     })
